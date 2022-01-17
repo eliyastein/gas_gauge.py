@@ -20,7 +20,7 @@ class GasGuage(rumps.App):
         except Exception:
             pass
 
-        threading.Timer(300, self.check_gas_price).start()
+        threading.Timer(60, self.check_gas_price).start()
 
 if __name__ == '__main__':
     GasGuage().run()
