@@ -3,9 +3,9 @@ import requests
 import threading
 import json
 
-class GasGuage(rumps.App):
+class GasGauge(rumps.App):
     def __init__(self):
-        super(GasGuage, self).__init__('Gas Guage')
+        super(GasGauge, self).__init__('Gas Gauge')
         try:
             self.check_gas_price()
         except Exception:
@@ -23,4 +23,4 @@ class GasGuage(rumps.App):
         threading.Timer(60, self.check_gas_price).start()
 
 if __name__ == '__main__':
-    GasGuage().run()
+    GasGauge().run()
